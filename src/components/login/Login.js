@@ -70,7 +70,7 @@ class Login extends Component{
             
             };
             var data = serializeArray(form_data);
-            cookies.set('userData', data,{ path: '/' });
+            cookies.set('userData', data,{ path: '/', maxAge: 600 });
             
             this.setState({redirect: true, formData: data});
 

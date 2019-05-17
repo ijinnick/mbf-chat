@@ -40,9 +40,9 @@ class Navigation extends Component{
                 <Navbar bg="primary" variant="dark">
                     <Navbar.Brand href="#home">Navbar</Navbar.Brand>
                     <Nav className="mr-auto">
-                        <Link to="/" className="nav-link">Home</Link>
-                        <Link to="/features" className="nav-link">Features</Link>
-                        <Link to="/pricing" className="nav-link">Pricing</Link>
+                        <Link to="/Main" className="nav-link">Home</Link>
+                        <Link to="/About" className="nav-link">About</Link>
+                        <Link to="/Chat" className="nav-link">Chat Rooms</Link>
                     </Nav>
                     <Form inline>
                         <FormControl type="text" placeholder="Search" className="mr-sm-2" />
