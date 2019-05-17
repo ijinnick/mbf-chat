@@ -100,6 +100,7 @@ class Login extends Component{
                                 type="text"
                                 name="fname"
                                 placeholder="First name"
+                                autoComplete="off"
                                 defaultValue=""
                                 />
                                 <Form.Control.Feedback type="invalid">
@@ -115,6 +116,7 @@ class Login extends Component{
                                 type="text"
                                 name="lname"
                                 placeholder="Last name"
+                                autoComplete="off"
                                 defaultValue=""
                                 />
                                 <Form.Control.Feedback type="invalid">
@@ -133,6 +135,7 @@ class Login extends Component{
                                     type="text"
                                     name="email"
                                     placeholder="Email Address"
+                                    autoComplete="off"
                                     aria-describedby="inputGroupPrepend"
                                     required
                                 />
@@ -156,7 +159,7 @@ class Login extends Component{
                 </Jumbotron>
         );
 
-        toRender = this.state.redirect ? <div>{alert('it was redirected')} <Redirect to="/Main" /></div>: loginCard
+        toRender = this.state.redirect ? <Redirect to="/Main" /> : loginCard;
         return (
             <div>
                 {toRender}
