@@ -1,5 +1,5 @@
 import React, {Component, Fragment} from 'react';
-import {Route, withRouter} from 'react-router-dom';
+import {Route, withRouter, Redirect} from 'react-router-dom';
 import Cookies from 'universal-cookie';
 
 import ChatRoom from '../pages/ChatRoom';
@@ -16,6 +16,8 @@ class Routing extends Component{
 
     render(){
 
+        let redirect = '';
+
         const content = Array.isArray(cookies.get('userData')) ? 
                         <Fragment>
                             <Nav /> 
@@ -29,9 +31,14 @@ class Routing extends Component{
                         </Fragment>
                         : <Route path="/" exact component={() => <Login />} />
 
+        
+        if(!cookies.get('userData') && window.location.pathname !== '/')
+            redirect = <Redirect to="/" />
+
         return (
             <Fragment>
                 {content}
+                {redirect}
             </Fragment>
         );
     }
