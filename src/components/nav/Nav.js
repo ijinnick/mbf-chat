@@ -36,20 +36,24 @@ class Navigation extends Component{
 
         return (
             <Fragment>
-                {redirect}
-                <Navbar bg="primary" variant="dark">
-                    <Navbar.Brand href="#home">Navbar</Navbar.Brand>
+            {redirect}
+                
+            <Navbar bg="primary" variant="dark" expand="lg" className="navbar_styling">
+                <Navbar.Brand href="/Main">My Book Folio</Navbar.Brand>
+                <Navbar.Toggle aria-controls="basic-navbar-nav" id="navbar-toggle"/>
+                <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="mr-auto">
                         <Link to="/Main" className="nav-link">Home</Link>
                         <Link to="/About" className="nav-link">About</Link>
                         <Link to="/Chat" className="nav-link">Chat Rooms</Link>
                     </Nav>
                     <Form inline>
-                        <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-                        <Button variant="outline-info">Search</Button>
+                        <FormControl type="text" placeholder="Search" className="mr-sm-2 nav_input_field" />
+                        <Button variant="outline-info" className="nav_search_btn">Search</Button>
                     </Form>
-                <Button onClick={this.handleClick} variant="success" className="logout_btn_styling">Logout</Button>
-                </Navbar>
+                    <Button onClick={this.handleClick} variant="success" className="logout_btn_styling">Logout</Button>
+                </Navbar.Collapse>
+            </Navbar>
             </Fragment>
         );
     }

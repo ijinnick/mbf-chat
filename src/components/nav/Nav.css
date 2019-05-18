@@ -1,4 +1,20 @@
 
+@media screen and (max-width: 900px) {
+    .navbar_styling{
+        position: relative;
+    }
+    .nav_input_field{
+        width: 70vw;
+    }
+    .nav_search_btn{
+        margin: 10px auto;
+    }
+}
+
+.navbar_styling{
+    text-align: center;
+}
+
 .logout_btn_styling{
     margin-left: 15px;
 }
